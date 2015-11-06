@@ -2,13 +2,13 @@ FROM baselibrary/java:8
 MAINTAINER ShawnMa <qsma@thoughtworks.com>
 
 ## Version
-ENV LOGSTASH_MAJOR 2.0
+ENV LOGSTASH_MAJOR   2.0
 ENV LOGSTASH_VERSION 1:2.0.0-1
 
 ## Repository
 RUN \
   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D88E42B4 &&\
-  echo "deb http://packages.elastic.co/logstash/${LOGSTASH_MAJOR}/debian stable main" > /etc/apt/sources.list.d/logstash.list
+  echo "deb http://packages.elastic.co/logstash/2.0/debian stable main" > /etc/apt/sources.list.d/logstash.list
 
 ## Packages
 RUN \
