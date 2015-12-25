@@ -3,7 +3,7 @@ MAINTAINER ShawnMa <qsma@thoughtworks.com>
 
 ## Version
 ENV LOGSTASH_MAJOR   1.5
-ENV LOGSTASH_VERSION 1:1.5.5-1
+ENV LOGSTASH_VERSION 1:1.5.6-1
 
 ## Repository
 RUN \
@@ -25,7 +25,7 @@ RUN chmod a+x            /docker-entrypoint.sh
 
 EXPOSE 9200 9300
 
-ENTRYPOINT ["tini", "--", "/docker-entrypoint.sh"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
 
 VOLUME ["/var/lib/logstash"]
 
