@@ -17,15 +17,9 @@ RUN \
   rm -rf /var/lib/apt/lists/*
 
 ## Environments
-ENV PATH   /opt/logstash/bin:$PATH
-
-## Scripts
-ADD docker-entrypoint.sh /docker-entrypoint.sh
-RUN chmod a+x            /docker-entrypoint.sh
+ENV PATH /opt/logstash/bin:$PATH
 
 EXPOSE 9200 9300
-
-ENTRYPOINT ["/docker-entrypoint.sh"]
 
 VOLUME ["/var/lib/logstash"]
 
